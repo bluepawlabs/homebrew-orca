@@ -12,7 +12,7 @@
 class Orca < Formula
   desc "Command-line client for the OrcaKey secrets and token manager"
   homepage "https://orcakey.sh"
-  version "0.1.0"
+  version "0.2.0"
 
   # The self-contained build carries its own runtime and needs nothing installed to run,
   # with one exception: the macOS host links Homebrew's Brotli at an absolute path
@@ -23,20 +23,20 @@ class Orca < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/bluepawlabs/homebrew-orca/releases/download/v#{version}/orca-#{version}-osx-arm64.tar.gz"
-      sha256 "a7335d6302e9dd0355106c7f6293da591471fb43a1234ccd2762e4c80fa79ae4"
+      sha256 "15e56155b2346be1d0afd12459b0ca23ce09942cba5b197968c08cbbb50ddb6d"
     else
       url "https://github.com/bluepawlabs/homebrew-orca/releases/download/v#{version}/orca-#{version}-osx-x64.tar.gz"
-      sha256 "d6156dea95e4dc5d3580903fae8f198fcb62d574c735a0d893f08ea1eda7f57d"
+      sha256 "e14c4e5ba02794b2dc0668367492aa86260d9cea64fe2e5924a76a60ff33aef1"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/bluepawlabs/homebrew-orca/releases/download/v#{version}/orca-#{version}-linux-arm64.tar.gz"
-      sha256 "9b4fa2309ce24eaef0462a29f177a44d0a7dcf87d94cad5e6fd5434dd1b7d1e8"
+      sha256 "578d440d657e6148d027e1f2b1e24b6bf1d991d3d22aa452969ca6c4b7f8dc78"
     else
       url "https://github.com/bluepawlabs/homebrew-orca/releases/download/v#{version}/orca-#{version}-linux-x64.tar.gz"
-      sha256 "c957cbcbc91a86b6f5aca77b9695393c02a34100726c5c33e9f70eaeca21fa1e"
+      sha256 "4dd817f0f7cecca5bf36332c75bc4e83c6b31ff3466f2ed2efe5104079bed093"
     end
   end
 
